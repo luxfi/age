@@ -61,9 +61,9 @@ func Inspect(r io.Reader, fileSize int64) (*Metadata, error) {
 	for _, s := range hdr.Recipients {
 		data.StanzaTypes = append(data.StanzaTypes, s.Type)
 		switch s.Type {
-		case "X25519", "ssh-rsa", "ssh-ed25519", "age-encryption.org/p256tag", "piv-p256":
+		case "X25519", "ssh-rsa", "ssh-ed25519", "p256tag", "piv-p256":
 			data.Postquantum = "no"
-		case "mlkem768x25519", "scrypt", "age-encryption.org/mlkem768p256tag":
+		case "mlkem768x25519", "scrypt", "mlkem768p256tag":
 			if data.Postquantum != "no" {
 				data.Postquantum = "yes"
 			}
