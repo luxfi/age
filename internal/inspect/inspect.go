@@ -21,7 +21,7 @@ type Metadata struct {
 		Header   int64 `json:"header"`
 		Armor    int64 `json:"armor"`
 		Overhead int64 `json:"overhead"`
-		// Currently, we don't do any padding, not MinPayload == MaxPayload and
+		// Currently, we don't do any padding, so MinPayload == MaxPayload and
 		// MinPadding == MaxPadding == 0, but that might change in the future.
 		MinPayload int64 `json:"min_payload"`
 		MaxPayload int64 `json:"max_payload"`
