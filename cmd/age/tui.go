@@ -23,8 +23,8 @@ import (
 	"log"
 	"os"
 
-	"filippo.io/age/armor"
-	"filippo.io/age/internal/term"
+	"github.com/luxfi/age/armor"
+	"github.com/luxfi/age/internal/term"
 )
 
 // l is a logger with no prefixes.

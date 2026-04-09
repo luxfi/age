@@ -13,7 +13,7 @@ import (
 	"runtime/debug"
 	"time"
 
-	"filippo.io/age"
+	"github.com/luxfi/age"
 	"golang.org/x/term"
 )
 

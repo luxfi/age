@@ -13,7 +13,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"filippo.io/age/internal/format"
+	"github.com/luxfi/age/internal/format"
 )
 
 func TestStanzaMarshal(t *testing.T) {

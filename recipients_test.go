@@ -10,7 +10,7 @@ import (
 	"io"
 	"testing"
 
-	"filippo.io/age"
+	"github.com/luxfi/age"
 )
 
 func TestX25519RoundTrip(t *testing.T) {

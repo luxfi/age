@@ -17,11 +17,11 @@ import (
 	"strings"
 	"testing"
 
-	"filippo.io/age"
-	"filippo.io/age/armor"
-	"filippo.io/age/internal/format"
-	"filippo.io/age/internal/inspect"
-	"filippo.io/age/internal/stream"
+	"github.com/luxfi/age"
+	"github.com/luxfi/age/armor"
+	"github.com/luxfi/age/internal/format"
+	"github.com/luxfi/age/internal/inspect"
+	"github.com/luxfi/age/internal/stream"
 	"golang.org/x/crypto/chacha20poly1305"
 	"golang.org/x/crypto/hkdf"
 
