@@ -7,9 +7,9 @@ import (
 	"io"
 	"strings"
 
-	"filippo.io/age/armor"
-	"filippo.io/age/internal/format"
-	"filippo.io/age/internal/stream"
+	"github.com/luxfi/age/armor"
+	"github.com/luxfi/age/internal/format"
+	"github.com/luxfi/age/internal/stream"
 )
 
 type Metadata struct {

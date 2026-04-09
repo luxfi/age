@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"strings"
 
-	"filippo.io/age/internal/bech32"
+	"github.com/luxfi/age/internal/bech32"
 	"filippo.io/hpke"
 )
 

@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"strings"
 
-	"filippo.io/age/internal/bech32"
-	"filippo.io/age/internal/format"
+	"github.com/luxfi/age/internal/bech32"
+	"github.com/luxfi/age/internal/format"
 	"filippo.io/hpke"
 	"golang.org/x/crypto/chacha20poly1305"
 )

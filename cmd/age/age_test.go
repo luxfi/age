@@ -11,8 +11,8 @@ import (
 	"sync"
 	"testing"
 
-	"filippo.io/age"
-	"filippo.io/age/plugin"
+	"github.com/luxfi/age"
+	"github.com/luxfi/age/plugin"
 	"github.com/rogpeppe/go-internal/testscript"
 )
 
@@ -58,9 +58,9 @@ var buildExtraCommands = sync.OnceValue(func() error {
 	if testing.CoverMode() != "" {
 		cmd.Args = append(cmd.Args, "-cover")
 	}
-	cmd.Args = append(cmd.Args, "filippo.io/age/cmd/age-keygen")
-	cmd.Args = append(cmd.Args, "filippo.io/age/extra/age-plugin-pq")
-	cmd.Args = append(cmd.Args, "filippo.io/age/cmd/age-plugin-batchpass")
+	cmd.Args = append(cmd.Args, "github.com/luxfi/age/cmd/age-keygen")
+	cmd.Args = append(cmd.Args, "github.com/luxfi/age/extra/age-plugin-pq")
+	cmd.Args = append(cmd.Args, "github.com/luxfi/age/cmd/age-plugin-batchpass")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	return cmd.Run()

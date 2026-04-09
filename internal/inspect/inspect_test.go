@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"filippo.io/age/internal/format"
-	"filippo.io/age/internal/stream"
+	"github.com/luxfi/age/internal/format"
+	"github.com/luxfi/age/internal/stream"
 )
 
 // buildFile serializes a header with a single stanza of the given type,

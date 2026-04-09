@@ -13,9 +13,9 @@ import (
 	"log"
 	"os"
 
-	"filippo.io/age"
-	"filippo.io/age/plugin"
-	"filippo.io/age/tag/internal/tagtest"
+	"github.com/luxfi/age"
+	"github.com/luxfi/age/plugin"
+	"github.com/luxfi/age/tag/internal/tagtest"
 )
 
 const classicRecipient = "age1tag1qwe0kafsjrar4txm6heqnhpfuggzr0gvznz7fvygxrlq90u5mq2pysxtw6h"
