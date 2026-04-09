@@ -17,7 +17,7 @@ import (
 	"strings"
 	"testing"
 
-	"filippo.io/age"
+	"github.com/luxfi/age"
 )
 
 func ExampleEncrypt() {

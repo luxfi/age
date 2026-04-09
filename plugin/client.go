@@ -21,8 +21,8 @@ import (
 
 	exec "golang.org/x/sys/execabs"
 
-	"filippo.io/age"
-	"filippo.io/age/internal/format"
+	"github.com/luxfi/age"
+	"github.com/luxfi/age/internal/format"
 )
 
 type Recipient struct {
