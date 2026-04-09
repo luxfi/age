@@ -13,12 +13,12 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"filippo.io/age"
-	"filippo.io/age/agessh"
-	"filippo.io/age/armor"
-	"filippo.io/age/internal/term"
-	"filippo.io/age/plugin"
-	"filippo.io/age/tag"
+	"github.com/luxfi/age"
+	"github.com/luxfi/age/agessh"
+	"github.com/luxfi/age/armor"
+	"github.com/luxfi/age/internal/term"
+	"github.com/luxfi/age/plugin"
+	"github.com/luxfi/age/tag"
 	"golang.org/x/crypto/cryptobyte"
 	"golang.org/x/crypto/ssh"
 )

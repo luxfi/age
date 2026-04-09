@@ -7,9 +7,9 @@ import (
 	"os"
 	"runtime/debug"
 
-	"filippo.io/age"
-	"filippo.io/age/plugin"
-	"filippo.io/age/tag"
+	"github.com/luxfi/age"
+	"github.com/luxfi/age/plugin"
+	"github.com/luxfi/age/tag"
 )
 
 const usage = `age-plugin-tagpq is an age plugin for ML-KEM-768 + P-256 post-quantum hybrid
