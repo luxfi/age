@@ -12,7 +12,7 @@ import (
 	"os"
 	"runtime/debug"
 
-	"filippo.io/age/internal/inspect"
+	"github.com/luxfi/age/internal/inspect"
 )
 
 const usage = `Usage:

@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"slices"
 
-	"filippo.io/age"
-	"filippo.io/age/internal/format"
-	"filippo.io/age/plugin"
+	"github.com/luxfi/age"
+	"github.com/luxfi/age/internal/format"
+	"github.com/luxfi/age/plugin"
 	"filippo.io/hpke"
 	"filippo.io/nistec"
 )

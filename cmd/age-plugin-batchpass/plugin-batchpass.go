@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	"filippo.io/age"
-	"filippo.io/age/plugin"
+	"github.com/luxfi/age"
+	"github.com/luxfi/age/plugin"
 )
 
 const usage = `age-plugin-batchpass is an age plugin that enables non-interactive

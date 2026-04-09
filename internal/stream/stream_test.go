@@ -12,7 +12,7 @@ import (
 	"testing"
 	"testing/iotest"
 
-	"filippo.io/age/internal/stream"
+	"github.com/luxfi/age/internal/stream"
 	"golang.org/x/crypto/chacha20poly1305"
 )
 

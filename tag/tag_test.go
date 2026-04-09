@@ -9,9 +9,9 @@ import (
 	"io"
 	"testing"
 
-	"filippo.io/age"
-	"filippo.io/age/tag"
-	"filippo.io/age/tag/internal/tagtest"
+	"github.com/luxfi/age"
+	"github.com/luxfi/age/tag"
+	"github.com/luxfi/age/tag/internal/tagtest"
 )
 
 func TestClassicRoundTrip(t *testing.T) {

@@ -18,9 +18,9 @@ import (
 	"strings"
 	"testing"
 
-	"filippo.io/age"
-	"filippo.io/age/armor"
-	"filippo.io/age/internal/format"
+	"github.com/luxfi/age"
+	"github.com/luxfi/age/armor"
+	"github.com/luxfi/age/internal/format"
 )
 
 func ExampleNewWriter() {
