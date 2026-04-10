@@ -1,30 +1,44 @@
-# Post-Quantum Roadmap for luxfi/age
+# Post-Quantum Status
 
-## Current: X25519 Recipients (v1.x)
-- Standard age X25519 (Curve25519) recipients
-- Adequate for operational data with limited shelf life
-- NOT post-quantum safe
+## Shipped: ML-KEM-768 + X25519 Hybrid (v1.3.0+)
 
-## Phase 2: X-Wing Hybrid Recipients (v2.x)
-- X-Wing = X25519 + ML-KEM-768 (NIST FIPS 203)
-- Hybrid: if quantum never arrives, X25519 still works
-- If quantum arrives, ML-KEM-768 protects
-- Implementation: new recipient type `xwing` in age
-- Key format: `age1xwing1<bech32-encoded X25519+ML-KEM public key>`
-- Backward compatible: old recipients still work
+Native post-quantum support via `HybridRecipient` / `HybridIdentity` in `pq.go`.
 
-## Phase 3: Pure ML-KEM Recipients (v3.x)
-- Pure ML-KEM-768 or ML-KEM-1024 recipients
-- When X25519 is considered deprecated
-- Key format: `age1mlkem1<bech32-encoded ML-KEM public key>`
+- **Algorithm**: ML-KEM-768 + X25519 (NIST FIPS 203 + Curve25519)
+- **HPKE suite**: `MLKEM768X25519` via `filippo.io/hpke`
+- **Stanza type**: `mlkem768x25519`
+- **Key prefix**: `age1pq` (Bech32)
+- **Label**: `"age-encryption.org/mlkem768x25519"` — enforces PQ-only mixing
+- **Plugin**: `age-plugin-pq` for backward compat with older age implementations
 
-## Dependencies
-- `hanzoai/age` — Hanzo ecosystem fork (same roadmap)
-- `lux/crypto` — ML-KEM implementation
-- NIST FIPS 203 (ML-KEM) — finalized August 2024
-- X-Wing draft: https://www.ietf.org/archive/id/draft-connolly-cfrg-xwing-kem-05.html
+## Usage
+
+```go
+import "github.com/luxfi/age"
+
+// Generate PQ keypair
+identity, _ := age.GenerateHybridIdentity()
+recipient := identity.Recipient()
+
+// Encrypt (PQ-safe)
+w, _ := age.Encrypt(out, recipient)
+w.Write(plaintext)
+w.Close()
+
+// Decrypt
+r, _ := age.Decrypt(ciphertext, identity)
+io.ReadAll(r)
+```
+
+## Security
+
+- **Harvest-now-decrypt-later safe**: ML-KEM-768 protects against future quantum computers
+- **Hybrid**: if ML-KEM is broken, X25519 still provides classical security
+- **Anonymous**: attacker can't tell which recipient a message is encrypted to
+- **Label enforcement**: PQ recipients can only be mixed with other PQ recipients (prevents downgrade)
 
 ## References
+
 - LP-102: Encrypted SQLite Replication Standard
-- HIP-0302: Hanzo Replicate
-- ZIP-0803: Zoo Encrypted SQLite Replication
+- NIST FIPS 203 (ML-KEM) — finalized August 2024
+- `filippo.io/hpke` — HPKE with ML-KEM-768 + X25519
