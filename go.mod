@@ -1,9 +1,9 @@
 module github.com/luxfi/age
 
-go 1.24.0
+go 1.26.3
 
 // Release build version.
-toolchain go1.25.5
+toolchain go1.26.3
 
 require (
 	filippo.io/edwards25519 v1.1.0
