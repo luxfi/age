@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/luxfi/age/internal/bech32"
 	"filippo.io/hpke"
+	"github.com/luxfi/age/internal/bech32"
 )
 
 // EncodeIdentity encodes a plugin identity string for a plugin with the given
