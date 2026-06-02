@@ -20,11 +20,11 @@ import (
 	"fmt"
 	"slices"
 
+	"filippo.io/hpke"
+	"filippo.io/nistec"
 	"github.com/luxfi/age"
 	"github.com/luxfi/age/internal/format"
 	"github.com/luxfi/age/plugin"
-	"filippo.io/hpke"
-	"filippo.io/nistec"
 )
 
 // Recipient is a tagged P-256 or hybrid P-256 + ML-KEM-768 recipient.
