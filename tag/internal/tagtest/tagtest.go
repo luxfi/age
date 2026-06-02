@@ -9,11 +9,11 @@ import (
 	"crypto/subtle"
 	"fmt"
 
+	"filippo.io/hpke"
+	"filippo.io/nistec"
 	"github.com/luxfi/age"
 	"github.com/luxfi/age/internal/format"
 	"github.com/luxfi/age/tag"
-	"filippo.io/hpke"
-	"filippo.io/nistec"
 )
 
 type ClassicIdentity struct {
