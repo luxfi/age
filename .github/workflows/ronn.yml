@@ -11,7 +11,7 @@ permissions:
 jobs:
   ronn:
     name: Ronn
-    runs-on: ubuntu-latest
+    runs-on: lux-build-amd64
     steps:
       - uses: actions/checkout@v5
         with:
@@ -40,7 +40,7 @@ jobs:
     needs: ronn
     permissions:
       contents: write
-    runs-on: ubuntu-latest
+    runs-on: lux-build-amd64
     steps:
       - uses: actions/checkout@v5
         with:

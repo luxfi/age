@@ -5,7 +5,7 @@ permissions:
 jobs:
   trigger:
     name: Trigger
-    runs-on: ubuntu-latest
+    runs-on: lux-build-amd64
     steps:
       - name: Trigger interoperability tests in str4d/rage
         continue-on-error: true
