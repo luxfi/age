@@ -31,7 +31,7 @@ jobs:
       - run: |
           go test -race ./...
   test-latest:
-    runs-on: lux-build-amd64
+    runs-on: linux-amd64
     strategy:
       fail-fast: false
       matrix:
@@ -52,7 +52,7 @@ jobs:
             go get -u -t ./...
             go test -race ./...
   staticcheck:
-    runs-on: lux-build-amd64
+    runs-on: linux-amd64
     steps:
       - uses: actions/checkout@v5
         with:
@@ -65,7 +65,7 @@ jobs:
         with:
           run: go run honnef.co/go/tools/cmd/staticcheck@latest ./...
   govulncheck:
-    runs-on: lux-build-amd64
+    runs-on: linux-amd64
     steps:
       - uses: actions/checkout@v5
         with:
