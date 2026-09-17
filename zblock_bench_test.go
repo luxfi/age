@@ -61,21 +61,21 @@ func TestZBlockCrypto(t *testing.T) {
 		ct := zEncBlock(s.rec, pt)
 
 		// warm
-		for i := 0; i < 50; i++ {
+		for range 50 {
 			zEncBlock(s.rec, pt)
 		}
 		t0 := time.Now()
-		for i := 0; i < iters; i++ {
+		for range iters {
 			_ = zEncBlock(s.rec, pt)
 		}
 		encUs := float64(time.Since(t0).Microseconds()) / float64(iters)
 
-		for i := 0; i < 50; i++ {
+		for range 50 {
 			r, _ := Decrypt(bytes.NewReader(ct), s.id)
 			io.Copy(io.Discard, r)
 		}
 		t1 := time.Now()
-		for i := 0; i < iters; i++ {
+		for range iters {
 			r, err := Decrypt(bytes.NewReader(ct), s.id)
 			if err != nil {
 				t.Fatal(err)
@@ -99,7 +99,7 @@ func TestZBlockCrypto(t *testing.T) {
 		ct := zEncBlock(s.rec, pt2)
 		n := 500
 		t1 := time.Now()
-		for i := 0; i < n; i++ {
+		for range n {
 			r, _ := Decrypt(bytes.NewReader(ct), s.id)
 			io.Copy(io.Discard, r)
 		}

@@ -7,14 +7,13 @@ package age_test
 import (
 	"bytes"
 	"crypto/rand"
+	"crypto/sha3"
 	"encoding/hex"
 	"io"
 	"strings"
 	"testing"
 
 	"github.com/luxfi/age"
-
-	"golang.org/x/crypto/sha3"
 )
 
 func TestXWingRoundTrip(t *testing.T) {
